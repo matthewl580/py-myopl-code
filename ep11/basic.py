@@ -1447,7 +1447,7 @@ class BuiltInFunction(BaseFunction):
   def execute_clear(self, exec_ctx):
     os.system('cls' if os.name == 'nt' else 'cls') 
     return RTResult().success(Number.null)
-  execute_clear.arg_names = []
+  execute_clear.arg_names = [] 
 
   def execute_is_number(self, exec_ctx):
     is_number = isinstance(exec_ctx.symbol_table.get("value"), Number)
